@@ -1,13 +1,14 @@
 Wapero::Application.routes.draw do
 
   resources :events do
+    resources :possible_dates
     member do
         post 'join'
         delete 'leave'
         post 'comment'
       end
   end
-
+  resources :ideas
   devise_for :users
   resources :users, :only => [:show, :index]
   root :to => "home#index"

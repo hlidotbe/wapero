@@ -1,18 +1,10 @@
-defaults: &defaults
-  host: localhost
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019
-
 development:
-  <<: *defaults
-  database: wapero_development
+  host: localhost
+  database: wapero
 
 test:
-  <<: *defaults
-  database: wapero_test
+  host: localhost
+  database: wapero
 
 # set these environment variables on your prod server
 production:
